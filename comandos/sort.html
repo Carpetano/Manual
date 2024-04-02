@@ -9,224 +9,307 @@
 <body>
 
     <!-- Nombre del comando -->
-    <h1>SORT</h1>
+<h1>SORT</h1>
 
-    <!-- Breve descripcion de que hace el comando -->
-    <p>El comando <strong>SORT</strong> sirve para ordenar el texto de un archivo.</p>
+<!-- Breve descripcion de que hace el comando -->
+<p>El comando <strong>SORT</strong> se utiliza para ordenar el texto de un archivo.</p>
+
+<hr>
+
+<!-- Parámetros más comunes -->
+<h2>Parámetros:</h2>
+<div>
+
+    <div class="parametros">
+        <!-- Usando grid la primera columna son los parametros -->
+        <p><code>-b, --ignore-leading-blanks</code></p>
     
+        <!-- Usando grid la segunda columna es la descripcion de que hace el parametro -->
+        <p>Ignora los espacios en blanco al principio de cada línea</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-d, --dictionary-order</code></p>
+        <p>Considera solamente caracteres alfanuméricos y espacios en blanco</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-f, --ignore-case</code></p>
+        <p>Ignora las diferencias entre mayúsculas y minúsculas al comparar</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-g, --general-numeric-sort</code></p>
+        <p>Ordena según el valor numérico general</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-i, --ignore-nonprinting</code></p>
+        <p>Ignora los caracteres no imprimibles al comparar</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-M, --month-sort</code></p>
+        <p>Ordena por nombres de meses: 'ENE' &lt; ... &lt; 'DIC'</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-h, --human-numeric-sort</code></p>
+        <p>Ordena números legibles para humanos (por ejemplo, 2K 1G)</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-n, --numeric-sort</code></p>
+        <p>Ordena según el valor numérico de la cadena</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-R, --random-sort</code></p>
+        <p>Baraja las líneas, pero agrupa claves idénticas</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--random-source=FILE</code></p>
+        <p>Utiliza FILE como fuente de datos aleatorios</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-r, --reverse</code></p>
+        <p>Invierte el resultado de las comparaciones</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--sort=WORD</code></p>
+        <p>Ordena según WORD: numérico general -g, numérico humano -h, mes -M, numérico -n, aleatorio -R, versión -V</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-V, --version-sort</code></p>
+        <p>Ordenación natural de números de versión dentro del texto</p>
+    </div>
+    
+
+</div>
+
+<hr>
+
+<h2>Otros parámetros: </h2>
+
+<!-- Lista de parámetros menos comunes -->
+<div>
+
+    <div class="parametros">
+        <p><code>--batch-size=NMERGE</code></p>
+        <p>Fusiona como máximo NMERGE entradas a la vez; para más, use archivos temporales</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-c, --check, --check=diagnose-first</code></p>
+        <p>Verifica si la entrada está ordenada; no realiza la ordenación</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-C, --check=quiet, --check=silent</code></p>
+        <p>Como -c, pero no informa sobre la primera línea incorrecta</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--compress-program=PROG</code></p>
+        <p>Utiliza PROG para comprimir temporales; descomprímelos con PROG -d</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--debug</code></p>
+        <p>Anota la parte de la línea utilizada para ordenar y advierte sobre el uso cuestionable a stderr</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--files0-from=F</code></p>
+        <p>Lee la entrada de los archivos especificados por nombres terminados en NUL en el archivo F; Si F es -, lee los nombres desde la entrada estándar</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-k, --key=KEYDEF</code></p>
+        <p>Ordena mediante una clave; KEYDEF da ubicación y tipo</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-m, --merge</code></p>
+        <p>Fusiona archivos ya ordenados; no realiza la ordenación</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-o, --output=FILE</code></p>
+        <p>Escribe el resultado en FILE en lugar de la salida estándar</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-s, --stable</code></p>
+        <p>Estabiliza la ordenación deshabilitando la comparación de último recurso</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-S, --buffer-size=SIZE</code></p>
+        <p>Utiliza SIZE para el búfer de memoria principal</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-t, --field-separator=SEP</code></p>
+        <p>Utiliza SEP en lugar de la transición de no blanco a blanco como separador de campos</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-T, --temporary-directory=DIR</code></p>
+        <p>Utiliza DIR para temporales, no $TMPDIR o /tmp; varias opciones especifican varios directorios</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--parallel=N</code></p>
+        <p>Cambia el número de ordenaciones ejecutadas concurrentemente a N</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-u, --unique</code></p>
+        <p>Con -c, verifica el orden estricto; sin -c, muestra solo el primero de una ejecución igual</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>-z, --zero-terminated</code></p>
+        <p>El delimitador de línea es NUL, no una nueva línea</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--help</code></p>
+        <p>Muestra esta ayuda y sale</p>
+    </div>
+    
+    <div class="parametros">
+        <p><code>--version</code></p>
+        <p>Muestra información de versión y sale</p>
+    </div>
+    
+</div>
+
+
     <hr>
 
-    <!-- Parametros mas comunes -->
-    <h2>Parámetros:</h2>
-    <div>
+    <h2>Ejemplos:</h2>
 
-        <div class="parametros">
-            <!-- Usando grid la primera columna son los parametros -->
-            <p><code>-b, --ignore-leading-blanks</code></p>
-        
-            <!-- Usando grid la segunda columna es la descripcion de que hace el parametro -->
-            <p>Ignora espacios en blanco</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-d, --dictionary-order</code></p>
-            <p>Considera solo espacios en blanco y caracteres alfanuméricos</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-f, --ignore-case</code></p>
-            <p>Convierte caracteres en minúscula a mayúscula para comparar</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-g, --general-numeric-sort</code></p>
-            <p>Compara según el valor numérico general</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-i, --ignore-nonprinting</code></p>
-            <p>Considera solo caracteres imprimibles</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-M, --month-sort</code></p>
-            <p>Compara (desconocido) &lt; 'ENE' &lt; ... &lt; 'DIC'</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-h, --human-numeric-sort</code></p>
-            <p>Compara números legibles para humanos (por ejemplo, 2K 1G)</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-n, --numeric-sort</code></p>
-            <p>Compara según el valor numérico de la cadena</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-R, --random-sort</code></p>
-            <p>Baraja, pero agrupa claves idénticas. Consulte shuf(1)</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--random-source=FILE</code></p>
-            <p>Obtiene bytes aleatorios de FILE</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-r, --reverse</code></p>
-            <p>Invierte el resultado de las comparaciones</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--sort=WORD</code></p>
-            <p>Ordena según WORD: numérico general -g, numérico humano -h, mes -M, numérico -n, aleatorio -R, versión -V</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-V, --version-sort</code></p>
-            <p>Ordenación natural de números (de versión) dentro del texto</p>
-        </div>
-        
+<!-- Descripcion de que se quiere conseguir -->
+<p>Mostrar archivo ordenado alfabéticamente (a-z).</p>
+
+<!-- Div para dar formato de consola-->
+<div class="comando">
     
-    </div>
+    <!-- Comando a ejecutar (no te olvides de poner el hr para hacer la línea separadora) -->
+    <p>sort myfile.txt</p> <hr>
 
-    <hr>
+    <!-- Resultado -->
+    <p>-!?</p>
+    <p>012345</p>
+    <p>abcdefg</p>
+    <p>cdefg</p>
+    <p>uvwxyz</p>
+    <p>xyz</p>
 
-    <h2>Otros parametros: </h2>
+</div>
 
-    <!-- Lista de parametros menos comunes -->
-    <div>
+<p>Mostrar archivo ordenado alfabéticamente en reversa (z-a).</p>
+
+<div class="comando">
     
-        <div class="parametros">
-            <p><code>--batch-size=NMERGE</code></p>
-            <p>Fusiona como máximo NMERGE entradas a la vez; para más, use archivos temporales</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-c, --check, --check=diagnose-first</code></p>
-            <p>Verifica la entrada ordenada; no ordena</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-C, --check=quiet, --check=silent</code></p>
-            <p>Como -c, pero no informa sobre la primera línea incorrecta</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--compress-program=PROG</code></p>
-            <p>Comprime temporales con PROG; descomprímelos con PROG -d</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--debug</code></p>
-            <p>Anota la parte de la línea utilizada para ordenar y advierte sobre el uso cuestionable a stderr</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--files0-from=F</code></p>
-            <p>Lee la entrada de los archivos especificados por nombres terminados en NUL en el archivo F; Si F es -, lea los nombres desde la entrada estándar</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-k, --key=KEYDEF</code></p>
-            <p>Ordena mediante una clave; KEYDEF da ubicación y tipo</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-m, --merge</code></p>
-            <p>Fusiona archivos ya ordenados; no ordena</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-o, --output=FILE</code></p>
-            <p>Escribe el resultado en FILE en lugar de la salida estándar</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-s, --stable</code></p>
-            <p>Estabiliza la ordenación deshabilitando la comparación de último recurso</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-S, --buffer-size=SIZE</code></p>
-            <p>Utiliza SIZE para el búfer de memoria principal</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-t, --field-separator=SEP</code></p>
-            <p>Utiliza SEP en lugar de la transición de no blanco a blanco</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-T, --temporary-directory=DIR</code></p>
-            <p>Utiliza DIR para temporales, no $TMPDIR o /tmp; varias opciones especifican varios directorios</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--parallel=N</code></p>
-            <p>Cambia el número de ordenaciones ejecutadas concurrentemente a N</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-u, --unique</code></p>
-            <p>Con -c, verifica el orden estricto; sin -c, muestra solo el primero de una ejecución igual</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>-z, --zero-terminated</code></p>
-            <p>El delimitador de línea es NUL, no nueva línea</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--help</code></p>
-            <p>Muestra esta ayuda y sale</p>
-        </div>
-        
-        <div class="parametros">
-            <p><code>--version</code></p>
-            <p>Muestra información de versión y sale</p>
-        </div>
-        
+    <p>sort myfile.txt -r</p> <hr>
+    <p>xyz</p>
+    <p>uvwxyz</p>
+    <p>cdefg</p>
+    <p>abcdefg</p>
+    <p>012345</p>
+    <p>-!?</p>
+
+</div>
+
+<p>Mostrar archivo ordenado numéricamente (ascendente).</p>
+
+<div class="comando">
     
-    </div>
+    <p>sort numbers.txt -n</p> <hr>
+    <p>10</p>
+    <p>20</p>
+    <p>30</p>
+    <p>40</p>
+    <p>50</p>
 
-    <hr>
+</div>
 
-    <h2>Ejemplos: </h2>
+<p>Mostrar archivo ordenado numéricamente (descendente).</p>
 
-    <!-- Descripcion de que se quiere conseguir -->
-    <p>Mostrar archivo ordenado alfabeticamente (a-z).</p>
+<div class="comando">
+    
+    <p>sort numbers.txt -n -r</p> <hr>
+    <p>50</p>
+    <p>40</p>
+    <p>30</p>
+    <p>20</p>
+    <p>10</p>
 
-    <!-- Div para dar formato de consola-->
-    <div class="comando">
-        
-        <!-- Comando a ejecutar (no te olvides de poner el hr para hacer la linea separadora) -->
-        <p>sort myfile.txt</p> <hr>
+</div>
 
-        <!-- Resultado -->
-        <p>-!?</p>
-        <p>012345</p>
-        <p>abcdefg</p>
-        <p>cdefg</p>
-        <p>uvwxyz</p>
-        <p>xyz</p>
+<p>Mostrar archivo ordenado alfabéticamente por nombre de mes.</p>
 
-    </div>
+<div class="comando">
+    
+    <p>sort dates.txt -M</p> <hr>
+    <p>Enero</p>
+    <p>Febrero</p>
+    <p>Marzo</p>
+    <p>Abril</p>
+    <p>Mayo</p>
+    <p>Junio</p>
 
-    <p>Mostrar archivo ordenado alfabeticamente en reversa (z-a).</p>
+</div>
 
-    <div class="comando">
-        
-        <p>sort myfile.txt -r</p> <hr>
-        <p>xyz</p>
-        <p>uvwxyz</p>
-        <p>cdefg</p>
-        <p>abcdefg</p>
-        <p>012345</p>
-        <p>-!?</p>
+<p>Mostrar archivo ordenado alfabéticamente ignorando mayúsculas y minúsculas.</p>
 
-    </div>
+<div class="comando">
+    
+    <p>sort text.txt -f</p> <hr>
+    <p>apple</p>
+    <p>Apple</p>
+    <p>Banana</p>
+    <p>banana</p>
+    <p>cherry</p>
+    <p>Cherry</p>
+
+</div>
+
+<p>Mostrar archivo ordenado alfabéticamente considerando solo caracteres alfanuméricos y espacios en blanco.</p>
+
+<div class="comando">
+    
+    <p>sort alpha_numeric.txt -d</p> <hr>
+    <p>123 apples</p>
+    <p>Apples 123</p>
+    <p>456 bananas</p>
+    <p>Bananas 456</p>
+    <p>789 cherries</p>
+    <p>Cherries 789</p>
+
+</div>
+
+<p>Mostrar archivo ordenado alfabéticamente de manera aleatoria.</p>
+
+<div class="comando">
+    
+    <p>sort random.txt -R</p> <hr>
+    <p>banana</p>
+    <p>apple</p>
+    <p>cherry</p>
+    <p>Apple</p>
+    <p>Banana</p>
+    <p>Cherry</p>
+
+</div>
+
 
 </body>
 </html>
